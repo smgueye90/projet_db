@@ -17,7 +17,7 @@ export default function ExamSubmissionPage() {
   const fetchExamDetails = async () => {
     try {
       // Exemple d'appel GET à l'API
-      const response = await axios.get(`http://localhost:5000/api/planificateur/exam-details/${examId}`);
+      const response = await axios.get(`http://localhost:3000/api/planificateur/exam-details/${examId}`);
       const data = response.data;
 
       // Mise à jour des détails de l'examen
@@ -70,7 +70,7 @@ export default function ExamSubmissionPage() {
         formData.append('examId', examId);
 
         // Appel POST pour la soumission
-        await axios.post('http://localhost:3000/api/submissions', formData);
+        await axios.post('http://localhost:3000/api/submit', formData);
 
         alert('Votre travail a été soumis avec succès !');
         setStep('submitted');

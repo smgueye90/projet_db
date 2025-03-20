@@ -85,7 +85,7 @@ function DemoPageContent({ pathname }) {
     const fetchResults = async () => {
       try {
         // Récupération des résultats depuis le backend
-        const response = await axios.get('http://localhost:5000/api/results');
+        const response = await axios.get('http://localhost:5000/api/exams/results');
         if (response.status === 200) {
           const data = response.data;
           setRows(

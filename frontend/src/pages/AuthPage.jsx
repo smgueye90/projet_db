@@ -18,7 +18,7 @@ export default function CredentialsSignInPage({ onLoginSuccess }) {
       const email = formData?.get('email');
       const password = formData?.get('password');
 
-      const response = await axios.post('http://localhost:3000/api/auth', {
+      const response = await axios.post('http://localhost:3000/api/auth/login', {
         email,
         password,
       });
